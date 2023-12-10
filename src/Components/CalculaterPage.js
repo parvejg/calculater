@@ -14,7 +14,17 @@ export const Calculater = () => {
           >
             AC
           </button>
-          <button className="calculater-btns">+/-</button>
+          <button
+            className="calculater-btns"
+            value={inputvalue}
+            onClick={(e) =>
+              setInputValue(
+                inputvalue ? -inputvalue : inputvalue + e.target.value
+              )
+            }
+          >
+            +/-
+          </button>
           <button
             className="calculater-btns"
             value="%"
@@ -46,7 +56,7 @@ export const Calculater = () => {
             8
           </button>
           <button
-            value={9}
+            value="9"
             className="calculater-btns"
             onClick={(e) => setInputValue(inputvalue + e.target.value)}
           >
@@ -54,29 +64,29 @@ export const Calculater = () => {
           </button>
           <button
             className="r-side-btn"
-            value="×"
+            value="*"
             onClick={(e) => setInputValue(inputvalue + e.target.value)}
           >
-            ×
+            x
           </button>
         </div>
         <div className="calculater-btn-wrapper">
           <button
             className="calculater-btns"
-            value={4}
+            value="4"
             onClick={(e) => setInputValue(inputvalue + e.target.value)}
           >
             4
           </button>
           <button
-            value={5}
+            value="5"
             className="calculater-btns"
             onClick={(e) => setInputValue(inputvalue + e.target.value)}
           >
             5
           </button>
           <button
-            value={6}
+            value="6"
             className="calculater-btns"
             onClick={(e) => setInputValue(inputvalue + e.target.value)}
           >
@@ -99,14 +109,14 @@ export const Calculater = () => {
             1
           </button>
           <button
-            value={2}
+            value="2"
             className="calculater-btns"
             onClick={(e) => setInputValue(inputvalue + e.target.value)}
           >
             2
           </button>
           <button
-            value={3}
+            value="3"
             className="calculater-btns"
             onClick={(e) => setInputValue(inputvalue + e.target.value)}
           >
@@ -122,7 +132,7 @@ export const Calculater = () => {
         </div>
         <div className="calculater-btn-wrapper">
           <button
-            value={0}
+            value="0"
             className="calculater-zero-btn"
             onClick={(e) => setInputValue(inputvalue + e.target.value)}
           >
